@@ -1,3 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     border: 2px solid black;
@@ -10,4 +35,23 @@
     padding: 20px;
     text-align: center;
     flex: 1;
+}
+
+.container2 {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: grey;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: bisque;
+    
 }

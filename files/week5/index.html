@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body div {
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        body div:hover {
+            background-color: peachpuff;
+        }
+
+        .translate {
+            transition: transform 3.5s ease;
+        }
+
+        .translate:hover {
+            transform: translate(550px, 0px);
+        }
+
+        .rotate {
+            transition: transform 3.5s ease;
+            transform-origin: bottom right;
+        }
+
+        .rotate:hover {
+            transform: rotate(-720deg);
+        }
+
+        .scale {
+            transition: transform 2.5s ease;
+            transform-origin: top left;
+        }
+
+        .scale:hover {
+            transform: scale(2.5, 1.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="translate">Translate!</div>
+    <div class="rotate">Rotate!</div>
+    <div class="scale">Scale!</div>
+
+</body>
+</html>

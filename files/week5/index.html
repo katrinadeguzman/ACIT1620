@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform</title>
     <style>
+        body {
+            background-color: #fefefe;
+        }
+
         body div {
             margin: 50px;
             width: 200px;
@@ -36,20 +41,125 @@
         }
 
         .scale {
-            transition: transform 2.5s ease;
-            transform-origin: top left;
+            transition: transform 2.0s ease;
+            transform-origin: top right;
         }
 
         .scale:hover {
-            transform: scale(2.5, 1.5);
+            transform: scale(-4.0, 1.0);
         }
 
+        .skew {
+            transition: transform 2.0s ease;
+            transform-origin: top right;
+        }
+
+        .skew:hover {
+            transform: skew(30deg, 0);
+        }
+
+        .matrix {
+            transition: transform 2.0s ease;
+            transform-origin: top right;
+        }
+
+        .matrix:hover {
+            /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+            transform: matrix(1, 0.5, -0.5, 1, 30, 20);
+        }
+
+        .color-btn {
+            background-color: pink;
+            color: white;
+            cursor: pointer;
+            transition: background-color 1.5s ease;
+        }
+
+        .color-btn:hover {
+            background-color: white;
+        }
+
+        .slide-in {
+            animation-duration: 3s;
+            animation-name: slide-in;
+        }
+
+        @keyframes slide-in {
+            from {
+                translate: 150vw 0;
+                scale: 200% 1;
+            }
+
+            to {
+                translate: 0 0;
+                scale: 100% 1;
+            }
+        }
+
+        .slider-left-right {
+            animation: slide-in-out 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes slide-in-out {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                transform: translate(70px);
+            }
+        }
+
+        .slider-up-down {
+            animation: slide-up-down 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes slide-up-down {
+            from {
+                transform: translate(0px, -70px);
+            }
+
+            to {
+                transform: translate(0px, 0px);
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="translate">Translate!</div>
     <div class="rotate">Rotate!</div>
     <div class="scale">Scale!</div>
+    <div class="skew">Skew!</div>
+    <div class="matrix">Matrix!</div>
+    <div class="color-btn">Color!</div>
 
+    <p class="slide-in">
+        Ice cream gingerbread lemon drops biscuit tootsie roll liquorice muffin muffin.
+        Toffee pudding caramels marshmallow gummies. Cake tiramisu apple pie soufflé
+        gummi bears caramels candy canes sweet roll. Sweet sugar plum icing cookie halvah.
+        Sesame snaps sweet roll toffee chocolate sugar plum pudding. Jelly-o wafer icing
+        sweet roll marzipan jujubes sweet cotton candy lollipop. Dessert cotton candy
+        donut chocolate bar pudding lollipop fruitcake cupcake jelly.
+    </p>
+
+    <p class="slider-left-right">
+        Ice cream gingerbread lemon drops biscuit tootsie roll liquorice muffin muffin.
+        Toffee pudding caramels marshmallow gummies. Cake tiramisu apple pie soufflé
+        gummi bears caramels candy canes sweet roll. Sweet sugar plum icing cookie halvah.
+        Sesame snaps sweet roll toffee chocolate sugar plum pudding. Jelly-o wafer icing
+        sweet roll marzipan jujubes sweet cotton candy lollipop. Dessert cotton candy
+        donut chocolate bar pudding lollipop fruitcake cupcake jelly.
+    </p>
+
+    <p class="slider-up-down">
+        Ice cream gingerbread lemon drops biscuit tootsie roll liquorice muffin muffin.
+        Toffee pudding caramels marshmallow gummies. Cake tiramisu apple pie soufflé
+        gummi bears caramels candy canes sweet roll. Sweet sugar plum icing cookie halvah.
+        Sesame snaps sweet roll toffee chocolate sugar plum pudding. Jelly-o wafer icing
+        sweet roll marzipan jujubes sweet cotton candy lollipop. Dessert cotton candy
+        donut chocolate bar pudding lollipop fruitcake cupcake jelly.
+    </p>
 </body>
+
 </html>

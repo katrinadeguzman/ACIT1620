@@ -1,0 +1,117 @@
+:root {
+    --dark-blue: #003c71;
+    --blue: #296cf6;
+    --transparent-blue: rgb(0 37 85 / 0.8);
+    --white: #ffffff;
+    --yellow: #fff400;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    background-color: var(--white);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    position: absolute;
+    transform: translateY(-50%);
+    color: var(--white);
+    bottom: 0px;
+    left: 50px;
+}
+
+.menubar {
+    background-color: var(--dark-blue);
+}
+
+.menubar ul {
+    margin: 0 15px 0 0;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    font-weight: bold;
+    font-size: 0.75em;
+    /* display: flex; */
+    float: right;
+}
+
+.menubar li {
+    transition: background-color 500ms linear;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.menubar li:hover {
+    color: var(--dark-blue);
+    background-color: var(--yellow);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header a {
+    color: var(--dark-blue);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 0;
+    margin: 0px 15px;
+    transition: border-bottom 500ms ease-in;
+}
+
+header a:hover {
+    color: var(--blue);
+    border-bottom: 2px solid var(--yellow);
+}
+
+.logo {
+    width: 64px;
+    height: 54px;
+    margin-left: 50px;
+}
+
+#big-info {
+    height: 800px;
+    background-image: url(images/bcit-big-info.png);
+    position: relative;
+}
+
+.overlay h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.overlay button {
+    border: 1px solid var(--white);
+    padding: 20px;
+    color: var(--white);
+    background-color: transparent;
+    transition: background-color 200ms ease-in;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.overlay button:hover {
+    background-color: var(--transparent-blue);
+}
+
+#welcome {
+    padding: 50px
+}
+
+#welcome h1 {
+    color: var(--dark-blue);
+}

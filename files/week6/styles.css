@@ -1,0 +1,107 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+form button {
+    display: block;
+    padding: 0.5rem 1rem;
+    background: hsl(120, 56%, 40%);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 5rem;
+    margin-left: auto;
+}
+
+header,
+footer {
+    background-color: teal;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+footer {
+    color: white;
+    padding: 5px;
+}
+nav {
+    text-align: center;
+}
+.menu {
+    list-style: none;
+    display: inline-block;
+    text-align: right;
+}
+
+.menu>li {
+    margin: 10px 0;
+}
+
+.menu>li>a {
+    text-decoration: none;
+    color: green;
+}
+
+.content-container {
+    display: flex;
+    height: 100vh;
+}
+
+aside {
+    width: 150px;
+    padding: 0px 25px;
+}
+
+.img {
+    width: 150px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+    padding-top: 15px;
+}
+
+main {
+    flex: 1;
+}
+
+.menu {
+    background-color: peachpuff;
+}
+.content-container {
+    background-color: lightgreen;
+}
+
+aside {
+    background-color: lightskyblue;
+}
+
+main {
+    background-color: antiquewhite;
+}
+@media only screen and (max-width: 600px) {
+     .menu {
+        display: flex;
+        justify-content: center;
+    }
+    .content-container {
+        display: grid;
+    } 
+}
